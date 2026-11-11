@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BloodLink – Every Drop Connects a Life</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+<style>
+:root{--bur:#761D32;--red:#E63950;--bg:#FFF9F6;--bl:#FCE8E8;--ink:#242126;--mut:#77727A;--card:#fff;--acc:#761D32;--ok:#1d7a52;--sh:0 12px 40px rgba(118,29,50,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1c1418;--bl:#2c1c23;--ink:#fbeeee;--mut:#b9aeb3;--card:#271a20;--acc:#ff8b9c;--ok:#5fd39b;--sh:0 12px 40px #0006}}
+:root[data-theme=dark]{--bg:#1c1418;--bl:#2c1c23;--ink:#fbeeee;--mut:#b9aeb3;--card:#271a20;--acc:#ff8b9c;--ok:#5fd39b;--sh:0 12px 40px #0006}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 'Plus Jakarta Sans',system-ui,sans-serif}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.025em;font-weight:800}
+h1{font-size:clamp(42px,7vw,84px)}h2{font-size:clamp(30px,4.6vw,54px)}h3{font-size:19px;letter-spacing:-.01em}
+p{margin:0}.w{max-width:1140px;margin:0 auto;padding:0 20px}section{padding:84px 0}
+.sub{color:var(--mut);max-width:58ch;margin-top:14px}.ey{font-weight:700;font-size:13px;letter-spacing:.14em;color:var(--red);margin-bottom:14px}
+button,select,input{font:inherit;color:inherit}:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.btn{background:var(--red);color:#fff;border:0;border-radius:999px;padding:13px 26px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:transform .15s,box-shadow .15s;box-shadow:0 8px 20px rgba(230,57,80,.3)}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none}.btn.s{padding:8px 16px;font-size:14px}
+.chip{display:inline-block;border:0;background:var(--bl);color:var(--acc);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700}
+button.chip{cursor:pointer;padding:8px 16px}button.chip[aria-pressed=true]{background:var(--bur);color:#fff}
+:root[data-theme=dark] button.chip[aria-pressed=true]{background:var(--red)}
+input,select{width:100%;background:var(--card);border:2px solid var(--bl);border-radius:14px;padding:12px 14px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;gap:18px;height:68px}.logo{font-weight:800;font-size:22px;text-decoration:none;display:flex;gap:9px;align-items:center}
+.lg{width:26px;height:26px;border-radius:50% 50% 50% 8%;transform:rotate(-45deg);background:linear-gradient(135deg,var(--red),var(--bur))}
+nav.l{margin-left:auto;display:flex;gap:20px;align-items:center;font-weight:500;font-size:15px}nav.l a{text-decoration:none}nav.l a:hover{color:var(--red)}
+.mb{display:none;margin-left:auto;background:var(--bl);border:0;border-radius:12px;padding:9px 14px;font-weight:700;color:var(--acc)}
+@media(max-width:900px){.mb{display:block}nav.l{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:16px 20px 24px;box-shadow:var(--sh)}nav.l.on{display:flex}}
+.hero{padding:40px 0 70px;overflow:hidden}.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media(max-width:900px){.hero .w{grid-template-columns:1fr}}
+.hero p.lead{font-size:19px;color:var(--mut);margin:22px 0 28px;max-width:46ch}.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.trust{margin-top:26px;font-size:14px;color:var(--mut);display:flex;gap:10px;align-items:center}.trust i{width:34px;height:2px;background:var(--red)}
+.art{position:relative}.art svg{width:100%;height:auto;display:block}
+.fc{position:absolute;background:color-mix(in srgb,var(--card) 80%,transparent);backdrop-filter:blur(10px);border:1px solid #fff6;border-radius:18px;padding:10px 14px;font-size:13px;box-shadow:var(--sh);animation:fl 5s ease-in-out infinite}
+.fc b{display:block;font-size:14px}.fc.a{top:4%;right:2%}.fc.b{bottom:6%;left:0;animation-delay:-2.5s}
+.gb{position:absolute;font-weight:800;color:var(--red);background:var(--card);border-radius:50%;width:44px;height:44px;display:grid;place-items:center;box-shadow:var(--sh);animation:fl 4s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.card{background:var(--card);border-radius:28px;box-shadow:var(--sh);padding:26px}
+.find{background:var(--bl)}.find .g2{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;margin-top:36px;align-items:start}
+@media(max-width:900px){.find .g2{grid-template-columns:1fr}}
+.gs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 18px}
+.gs button{border:2px solid var(--bl);background:var(--bg);border-radius:16px;padding:12px 0;font-weight:800;font-size:18px;cursor:pointer}
+.gs button[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff;transform:scale(1.05)}
+.res{display:grid;gap:10px}.dn{display:flex;gap:14px;align-items:center;background:var(--card);border-radius:20px;padding:14px 16px;box-shadow:var(--sh)}
+.dn .av{width:50px;height:50px;border-radius:18px;background:linear-gradient(135deg,var(--red),var(--bur));color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.dn small{display:block;color:var(--mut);line-height:1.4}.dn .btn{margin-left:auto}
+.st{font-size:12px;font-weight:700;color:var(--ok)}.st.w2{color:#b36b00}
+.dis{font-size:13px;color:var(--mut);margin-top:12px}
+.lab{display:inline-block;background:var(--ink);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:.06em;padding:5px 12px;border-radius:999px;margin-top:16px}
+.fl{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0}
+.rq{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.rc{background:var(--card);border-radius:24px;padding:22px;box-shadow:var(--sh);border-left:8px solid var(--mut)}
+.rc.Critical{border-color:var(--red)}.rc.Urgent{border-color:#e8913a}.rc.Normal{border-color:#4a9a7a}
+.rc .t{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.rc .bg{font-size:40px;font-weight:800;line-height:1;color:var(--acc)}
+.rc p{color:var(--mut);font-size:14px}.rc .dt{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed var(--bl);font-size:14px}.rc.open .dt{display:block}
+.don{background:linear-gradient(160deg,var(--bur),#4b1120);color:#fff}.don .sub{color:#f3cdd4}
+.don .w{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}@media(max-width:900px){.don .w{grid-template-columns:1fr}}
+.fm{background:var(--card);color:var(--ink);border-radius:28px;padding:26px;display:grid;gap:14px}
+.pg{display:flex;gap:6px}.pg i{flex:1;height:6px;border-radius:9px;background:var(--bl);transition:background .3s}.pg i.on{background:var(--red)}
+.stp{display:none;gap:14px}.stp.on{display:grid;animation:in .35s}@keyframes in{from{opacity:0;transform:translateX(18px)}}
+.er{color:var(--red);font-size:13px;min-height:18px;font-weight:500}.nv{display:flex;gap:10px;justify-content:space-between}
+.ok{text-align:center;padding:20px 0}.ck{width:84px;height:84px;margin:0 auto 14px;border-radius:50%;background:var(--ok);display:grid;place-items:center;animation:pop .5s}
+.ck svg{width:44px;stroke:#fff;fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:50;animation:dr .6s .3s both}@keyframes dr{from{stroke-dashoffset:50}}@keyframes pop{from{transform:scale(0)}}
+.edu .g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:34px}
+details{background:var(--card);border-radius:24px;padding:22px;box-shadow:var(--sh)}summary{font-weight:800;font-size:19px;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:'+';color:var(--red);font-size:26px;line-height:1}details[open] summary::after{content:'–'}
+details ul{padding-left:20px;margin:14px 0 0;display:grid;gap:8px;color:var(--mut);font-size:15px}
+.nt{margin-top:22px;padding:16px 20px;background:var(--bl);border-radius:18px;font-size:14px}
+.jr{background:var(--bl)}.js{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;position:relative}
+@media(max-width:900px){.js{grid-template-columns:1fr;gap:34px}}
+.ln{position:absolute;top:70px;left:12%;right:12%;height:4px;background:repeating-linear-gradient(90deg,var(--red) 0 10px,transparent 10px 20px);opacity:.25}
+.ln b{position:absolute;left:0;top:-5px;width:14px;height:14px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--red);animation:tv 5s linear infinite}@keyframes tv{to{left:100%}}
+@media(max-width:900px){.ln{display:none}}
+.sg{text-align:center;padding:0 12px;opacity:0;transform:translateY(24px);transition:.7s}.sg.in{opacity:1;transform:none}
+.sg svg{width:130px;height:130px;background:var(--card);border-radius:50%;box-shadow:var(--sh);padding:18px}.sg h3{margin:16px 0 6px}.sg p{font-size:14px;color:var(--mut)}
+.cm{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:34px;align-items:center}@media(max-width:900px){.cm{grid-template-columns:1fr}}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cg button{aspect-ratio:1;border-radius:50% 50% 50% 14%;border:0;background:var(--bl);font-weight:800;font-size:22px;cursor:pointer;color:var(--acc);transition:.25s}
+.cg button.sel{background:var(--bur);color:#fff;transform:scale(1.1)}.cg button.hit{background:var(--red);color:#fff;transform:scale(1.04)}.cg button.dim{opacity:.35}
+.bk{background:var(--card)}.bks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.bkc{background:var(--bg);border-radius:22px;padding:20px;border:1px solid var(--bl)}.bkc p{color:var(--mut);font-size:14px}.bkc .dt{display:none;margin-top:10px;font-size:14px}.bkc.open .dt{display:block}
+.tl{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:26px 0}.tl input{max-width:300px}
+.my{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:34px}
+.fp{perspective:900px;height:210px;border:0;background:none;padding:0;cursor:pointer;text-align:left}
+.fi{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}.fp[aria-pressed=true] .fi{transform:rotateY(180deg)}
+.fi>div{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:8px;font-size:15px}
+.fi .f{background:var(--bl)}.fi .b{background:var(--bur);color:#fff;transform:rotateY(180deg)}.fi b{font-size:12px;letter-spacing:.12em}
+.im{background:var(--ink);color:#fbeeee}.im .sub{color:#c9bcc2}.im .g{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}@media(max-width:900px){.im .g{grid-template-columns:1fr}}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}.ct b{display:block;font-size:clamp(36px,5vw,58px);font-weight:800;color:#ff8b9c;line-height:1}.ct span{font-size:14px;color:#c9bcc2}
+.im svg{width:100%}.nd{animation:pu 3s ease-in-out infinite}@keyframes pu{50%{opacity:.5}}.fw{stroke-dasharray:6 6;animation:da 2s linear infinite}@keyframes da{to{stroke-dashoffset:-24}}
+.cmn .g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}
+.sv{display:flex;gap:14px}.sv .av{width:54px;height:54px;border-radius:50%;flex:none;display:grid;place-items:center;font-weight:800;color:#fff}
+.dr{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--bl)}.dr .d{background:var(--bl);color:var(--acc);border-radius:16px;padding:8px 12px;text-align:center;font-weight:800;line-height:1.2;min-width:62px}
+.cta{background:linear-gradient(135deg,var(--red),var(--bur));color:#fff;text-align:center}.cta .btn{background:#fff;color:var(--bur);margin-top:26px}
+footer{background:var(--ink);color:#d8ccd1;padding:50px 0 30px;font-size:14px}footer .w{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}@media(max-width:700px){footer .w{grid-template-columns:1fr}}
+footer a{display:block;color:inherit;text-decoration:none;padding:3px 0}footer a:hover{color:#ff8b9c}footer h3{color:#fff;font-size:15px;margin-bottom:8px}
+.so{display:flex;gap:10px;margin-top:14px}.so a{width:38px;height:38px;border-radius:50%;background:#ffffff1a;display:grid;place-items:center;font-weight:800;padding:0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140px);background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:999px;transition:transform .3s;z-index:40;font-weight:700;max-width:92vw;text-align:center}.toast.on{transform:translate(-50%,0)}
+.th{background:var(--bl);border:0;border-radius:999px;padding:7px 13px;font-weight:700;color:var(--acc);cursor:pointer}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.sg{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="w nav"><a class="logo" href="#top"><span class="lg"></span>BloodLink</a>
+<button class="mb" id="mb" aria-expanded="false" aria-controls="nv">Menu</button>
+<nav class="l" id="nv" aria-label="Main"><a href="#find">Find a donor</a><a href="#urgent">Requests</a><a href="#compat">Blood groups</a><a href="#learn">Learn</a><a href="#banks">Directory</a><a href="#impact">Impact</a><button class="th" id="th" aria-label="Toggle light or dark theme">Theme</button><a class="btn s" href="#donate">Become a donor</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="w"><div>
+<p class="ey">A COMMUNITY THAT CARES</p>
+<h1>One Donation.<br>A Thousand Possibilities.</h1>
+<p class="lead">Connecting voluntary blood donors, hospitals, and authorised blood banks to make life-saving blood accessible when every second matters.</p>
+<div class="row"><a class="btn" href="#find">Find a Blood Donor</a><a class="btn o" href="#donate">Become a Donor</a></div>
+<p class="trust"><i></i>Built around voluntary donors. Connected by compassion.</p></div>
+<div class="art">
+<svg viewBox="0 0 520 430" role="img" aria-label="Illustration: a donor giving blood with a nurse, connected by a glowing line to a patient in a hospital bed">
+<defs><linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#E63950"/><stop offset="1" stop-color="#761D32"/></linearGradient></defs>
+<rect x="6" y="50" width="250" height="300" rx="48" fill="#FCE8E8"/><rect x="274" y="130" width="240" height="220" rx="48" fill="#FCE8E8" opacity=".7"/>
+<path d="M70 300h120v14H70zM82 200q-18 0-18 40v62h24v-62q0-22 14-22" fill="#761D32"/>
+<rect x="84" y="196" width="76" height="110" rx="30" fill="#E63950"/><circle cx="122" cy="156" r="32" fill="#f3c2a8"/><path d="M90 150q8-34 46-26q20 8 18 30q-24-18-64-4z" fill="#242126"/>
+<path d="M150 232q40 8 56-10" stroke="#f3c2a8" stroke-width="16" fill="none" stroke-linecap="round"/>
+<circle cx="220" cy="140" r="26" fill="#e8b08f"/><path d="M196 134q10-30 40-20q12 8 8 22q-20-14-48-2z" fill="#761D32"/><rect x="198" y="168" width="48" height="90" rx="22" fill="#fff" stroke="#242126" stroke-opacity=".12"/>
+<rect x="196" y="250" width="30" height="48" rx="8" fill="#FFF9F6"/><path d="M204 260v60" stroke="#77727A" stroke-width="3"/>
+<rect x="290" y="270" width="210" height="30" rx="12" fill="#761D32"/><rect x="290" y="240" width="60" height="34" rx="14" fill="#fff"/><circle cx="320" cy="236" r="22" fill="#f3c2a8"/><path d="M296 232q10-26 36-14q8 8 6 14z" fill="#77727A"/><rect x="340" y="246" width="140" height="28" rx="14" fill="#E63950"/><rect x="296" y="300" width="8" height="40" fill="#242126"/><rect x="486" y="300" width="8" height="40" fill="#242126"/>
+<path id="pa" d="M206 252C240 400 380 410 410 290" fill="none" stroke="url(#gl)" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+<path d="M0-12C0-12-9 0-9 5a9 9 0 0 0 18 0C9 0 0-12 0-12z" fill="#E63950"><animateMotion dur="3.6s" repeatCount="indefinite" rotate="auto"><mpath href="#pa"/></animateMotion></path>
+</svg>
+<span class="gb" style="top:6%;left:10%">A+</span><span class="gb" style="top:34%;right:0;animation-delay:-1s">O+</span><span class="gb" style="bottom:24%;left:-2%;animation-delay:-2s">B+</span><span class="gb" style="top:0;right:30%;animation-delay:-3s;width:50px;height:50px">AB+</span>
+<div class="fc a"><b>Donor connection</b>O+ · Sample profile</div><div class="fc b"><b>Verified blood bank</b>Demo listing · Sample data</div>
+</div></div></section>
+
+<section class="find" id="find"><div class="w"><p class="ey">FIND A DONOR</p><h2>Someone Out There Could Be Your Match.</h2><p class="sub">Find potential blood donors by selecting a blood group and location.</p>
+<div class="g2"><div class="card"><b>Blood group</b><div class="gs" id="gs" role="group" aria-label="Blood group"></div>
+<label>City<select id="fc"></select></label><div class="fl" style="margin:16px 0 0" id="fa" role="group" aria-label="Availability"></div>
+<button class="btn" style="margin-top:18px;width:100%" id="sr">Search donors</button>
+<p class="dis">Prototype with clearly labelled sample data. Real donor availability must always be confirmed.</p></div>
+<div><div class="res" id="res" aria-live="polite"></div></div></div></div></section>
+
+<section id="urgent"><div class="w"><p class="ey">URGENT REQUESTS</p><h2>Every Second Matters.</h2>
+<span class="lab">DEMO REQUESTS — NOT LIVE MEDICAL REQUESTS</span>
+<div class="fl" id="rf" role="group" aria-label="Filter by urgency"></div><div class="rq" id="rq"></div></div></section>
+
+<section class="don" id="donate"><div class="w"><div><p class="ey" style="color:#ffb3bf">BECOME A DONOR</p><h2>Be Someone’s Reason to Hope.</h2><p class="sub">Three short steps. Everything stays in your browser: this prototype never sends or stores your details.</p>
+<svg viewBox="0 0 360 200" style="width:100%;max-width:380px;margin-top:26px" role="img" aria-label="Illustration of a young donor and a health worker"><rect width="360" height="200" rx="40" fill="#ffffff14"/><rect x="70" y="86" width="96" height="100" rx="34" fill="#E63950"/><circle cx="118" cy="62" r="32" fill="#f3c2a8"/><path d="M86 56q8-34 46-24q18 10 14 26q-22-18-60-2z" fill="#242126"/><rect x="200" y="96" width="82" height="92" rx="30" fill="#fff"/><circle cx="241" cy="70" r="29" fill="#e8b08f"/><path d="M212 64q10-28 40-16q10 8 6 18q-20-14-46-2z" fill="#FCE8E8"/><path d="M166 130q22 6 36-6" stroke="#f3c2a8" stroke-width="14" fill="none" stroke-linecap="round"/><path d="M180 30c0 0-10 12-10 18a10 10 0 0 0 20 0c0-6-10-18-10-18z" fill="#FCE8E8"/></svg></div>
+<form class="fm" id="fm" novalidate><div class="pg" id="pg"><i class="on"></i><i></i><i></i></div>
+<div class="stp on"><h3>Your details</h3><label>Full name<input id="n" autocomplete="name"></label><label>Age<input id="a" inputmode="numeric"></label><label>Gender (optional)<select id="gd"><option value="">Prefer not to say</option><option>Woman</option><option>Man</option><option>Non-binary</option></select></label><label>Contact number<input id="p" inputmode="tel" autocomplete="tel"></label></div>
+<div class="stp"><h3>Donation information</h3><label>Blood group<select id="bg"><option value="">Choose</option></select></label><label>City<select id="ci"></select></label><label>Last donation date (leave blank if never)<input type="date" id="ld"></label><label>Preferred donation location<input id="pl" placeholder="e.g. a nearby licensed centre"></label></div>
+<div class="stp"><h3>Eligibility acknowledgement</h3><label style="grid-auto-flow:column;justify-content:start;font-weight:500;gap:10px;align-items:start"><input type="checkbox" id="c1" style="width:auto"> I am willing to undergo a professional eligibility assessment.</label><label style="grid-auto-flow:column;justify-content:start;font-weight:500;gap:10px;align-items:start"><input type="checkbox" id="c2" style="width:auto"> I understand that registering does not establish that I am medically eligible to donate.</label></div>
+<div class="er" id="er" role="alert"></div><div class="nv"><button type="button" class="btn o s" id="bk" hidden>Back</button><button type="submit" class="btn" id="nx" style="margin-left:auto">Continue</button></div></form></div></section>
+
+<section class="edu" id="learn"><div class="w"><p class="ey">KNOW BEFORE YOU DONATE</p><h2>Your 10 Minutes Could Mean Someone’s Lifetime.</h2>
+<div class="g3"><details open><summary>Who can donate?</summary><ul><li>Meet the minimum age requirement in your country.</li><li>Meet the weight requirement.</li><li>Haemoglobin within the accepted range.</li><li>Be in suitable general health.</li><li>Some medications, illnesses, procedures or travel can mean temporary or permanent deferral.</li></ul></details>
+<details><summary>When should you not donate?</summary><ul><li>Fever or active infection.</li><li>Low haemoglobin.</li><li>Certain medical conditions.</li><li>Pregnancy and some postpartum periods.</li><li>Recent surgery or medical procedures.</li><li>Certain medications or temporary deferral conditions.</li></ul></details>
+<details><summary>Why it matters</summary><ul><li>Helps patients needing surgery.</li><li>Supports accident and trauma care.</li><li>Helps people in cancer treatment.</li><li>Supports patients with severe anaemia and blood disorders.</li><li>Builds community participation and social responsibility.</li></ul></details></div>
+<p class="nt">Eligibility depends on local blood donation regulations and professional medical screening. This guide never replaces that screening.</p></div></section>
+
+<section class="jr"><div class="w"><p class="ey">THE DONATION JOURNEY</p><h2>From Your Decision to Someone’s New Beginning.</h2>
+<div class="js"><div class="ln"><b></b></div>
+<div class="sg"><svg viewBox="0 0 100 100"><circle cx="50" cy="34" r="14" fill="#f3c2a8"/><rect x="28" y="52" width="44" height="34" rx="16" fill="#E63950"/></svg><h3>1 · You show up</h3><p>A voluntary donor arrives at a donation centre.</p></div>
+<div class="sg"><svg viewBox="0 0 100 100"><rect x="26" y="30" width="48" height="44" rx="10" fill="#FCE8E8" stroke="#761D32" stroke-width="4"/><path d="M36 54l10 10 20-22" stroke="#E63950" stroke-width="6" fill="none" stroke-linecap="round"/></svg><h3>2 · Safe screening</h3><p>Healthcare professionals assess donor eligibility.</p></div>
+<div class="sg"><svg viewBox="0 0 100 100"><path d="M50 18c0 0-22 26-22 42a22 22 0 0 0 44 0c0-16-22-42-22-42z" fill="#E63950"/><path d="M40 62a10 10 0 0 0 10 10" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/></svg><h3>3 · Every drop counts</h3><p>Blood is collected, tested and processed.</p></div>
+<div class="sg"><svg viewBox="0 0 100 100"><rect x="14" y="52" width="72" height="16" rx="8" fill="#761D32"/><circle cx="34" cy="44" r="12" fill="#f3c2a8"/><path d="M66 20c0 0-8 9-8 14a8 8 0 0 0 16 0c0-5-8-14-8-14z" fill="#E63950"/></svg><h3>4 · Hope reaches someone</h3><p>Suitable blood components reach a patient in need.</p></div></div></div></section>
+
+<section id="compat"><div class="w"><p class="ey">BLOOD GROUPS</p><h2>Blood Groups, Made Simple.</h2>
+<div class="cm"><div><div class="fl" style="margin-top:0" id="cm" role="group" aria-label="Mode"></div><div class="cg" id="cg"></div></div>
+<div><div class="card"><h3 id="ct">Select a blood group</h3><p class="sub" id="cx" style="margin-top:8px"></p></div><p class="nt">This simplified chart is for red blood cell compatibility only. Plasma follows different rules, and real transfusion decisions need professional crossmatching and clinical assessment.</p></div></div></div></section>
+
+<section class="bk" id="banks"><div class="w"><p class="ey">NETWORK</p><h2>Connected Care Starts Here.</h2>
+<span class="lab">FICTIONAL DEMO LISTINGS — NOT OFFICIAL RECORDS</span>
+<div class="tl"><input id="bs" placeholder="Search by name or city" aria-label="Search directory"><span id="bf" class="fl" style="margin:0" role="group" aria-label="Type"></span></div><div class="bks" id="bl"></div></div></section>
+
+<section><div class="w"><p class="ey">MYTHS VS FACTS</p><h2>Let’s Clear the Myths. Not the Blood.</h2><div class="my" id="my"></div></div></section>
+
+<section class="im" id="impact"><div class="w g"><div><p class="ey">OUR IMPACT</p><h2>Data That Feels Human.</h2><p class="sub">Each connection starts with one person deciding to help.</p>
+<div class="ct"><div><b data-n="2450" data-s="+">0</b><span>registered demo donors</span></div><div><b data-n="120" data-s="+">0</b><span>demo partner institutions</span></div><div><b data-n="860" data-s="+">0</b><span>illustrative donation connections</span></div><div><b data-n="8">0</b><span>blood groups represented</span></div></div>
+<p style="font-size:13px;margin-top:22px;color:#c9bcc2">All statistics shown are illustrative prototype data, not actual platform impact.</p></div>
+<svg viewBox="0 0 400 340" role="img" aria-label="Network of donors, hospitals and blood banks connected by blood drops"><g stroke="#ff8b9c" stroke-width="2" fill="none" class="fw"><path d="M200 170L70 70M200 170L330 70M200 170L60 270M200 170L340 270M200 170L200 40M200 170L200 310"/></g>
+<circle cx="200" cy="170" r="34" fill="#E63950"/><text x="200" y="176" fill="#fff" text-anchor="middle" font-weight="800" font-size="16">Link</text>
+<g class="nd" fill="#FCE8E8"><circle cx="70" cy="70" r="22"/><circle cx="60" cy="270" r="22"/><circle cx="200" cy="310" r="22"/></g><g class="nd" fill="#fff" style="animation-delay:-1.5s"><circle cx="330" cy="70" r="22"/><circle cx="340" cy="270" r="22"/><circle cx="200" cy="40" r="22"/></g>
+<g font-size="11" font-weight="700" text-anchor="middle" fill="#242126"><text x="70" y="74">Donor</text><text x="60" y="274">Donor</text><text x="200" y="314">Donor</text><text x="330" y="74">Bank</text><text x="340" y="274">Hospital</text><text x="200" y="44">Bank</text></g></svg></div></section>
+
+<section class="cmn"><div class="w"><p class="ey">COMMUNITY</p><h2>Small Acts. Extraordinary Impact.</h2>
+<div class="g3"><div class="card"><h3>Volunteer stories</h3><p class="dis">Fictional characters.</p><div class="sv" style="margin-top:16px"><span class="av" style="background:#E63950">AK</span><p>“I came for my college drive and now I bring a friend every time.” — Asha, sample volunteer</p></div><div class="sv" style="margin-top:16px"><span class="av" style="background:#761D32">RM</span><p>“Coordinating the drive taught me how many people want to help.” — Ravi, sample organiser</p></div></div>
+<div class="card"><h3>Upcoming demo drives</h3><div class="dr"><span class="d">21<br>Nov</span><div><b>Campus Giving Day</b><p class="dis" style="margin:0">Demo event · Lucknow</p></div></div><div class="dr"><span class="d">5<br>Dec</span><div><b>Neighbourhood Drive</b><p class="dis" style="margin:0">Demo event · Gorakhpur</p></div></div><div class="dr" style="border:0"><span class="d">14<br>Dec</span><div><b>Workplace Drive</b><p class="dis" style="margin:0">Demo event · Kanpur</p></div></div></div>
+<div class="card"><h3>Awareness campaigns</h3><p class="sub" style="margin-top:10px">“Know Your Group” and “Bring a Friend” are sample campaigns for this prototype. Share the idea with someone who could give.</p><button class="btn" style="margin-top:18px" id="sh">Share awareness</button></div></div></div></section>
+
+<section class="cta"><div class="w"><h2>Be the Link Someone Is Waiting For.</h2><a class="btn" href="#donate">Become a Voluntary Donor</a></div></section>
+</main>
+<footer><div class="w"><div><div class="logo" style="color:#fff"><span class="lg"></span>BloodLink</div><p style="margin-top:10px">Every Drop Connects a Life.</p><div class="so"><a href="#top" aria-label="Instagram">In</a><a href="#top" aria-label="X">X</a><a href="#top" aria-label="LinkedIn">Li</a></div><p style="margin-top:16px;font-size:12px">Design prototype. All data is illustrative.</p></div>
+<div><h3>Explore</h3><a href="#top">About us</a><a href="#find">Find a donor</a><a href="#donate">Become a donor</a><a href="#learn">Blood donation guide</a></div>
+<div><h3>More</h3><a href="#compat">Blood compatibility</a><a href="#banks">Hospital and blood bank directory</a><a href="#top" data-t="Contact is not active in this prototype.">Contact</a><a href="#top" data-t="No data is collected by this prototype.">Privacy policy</a></div></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+var G=['A+','A-','B+','B-','AB+','AB-','O+','O-'],CT=['Lucknow','Gorakhpur','Kanpur','Varanasi','Delhi'];
+var FROM={'A+':['A+','A-','O+','O-'],'A-':['A-','O-'],'B+':['B+','B-','O+','O-'],'B-':['B-','O-'],'AB+':G,'AB-':['A-','B-','AB-','O-'],'O+':['O+','O-'],'O-':['O-']};
+var TO={};G.forEach(function(g){TO[g]=G.filter(function(r){return FROM[r].indexOf(g)>-1})});
+function $(i){return document.getElementById(i)}function mk(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e}
+function toast(t){var e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.k);toast.k=setTimeout(function(){e.classList.remove('on')},2600)}
+function chips(box,list,get,set,cls){box.innerHTML='';list.forEach(function(v){var b=mk('button',cls||'chip',v);b.type='button';b.setAttribute('aria-pressed',get()===v);b.onclick=function(){set(v);[].forEach.call(box.children,function(c){c.setAttribute('aria-pressed',c.textContent===v)})};box.appendChild(b)})}
+$('mb').onclick=function(){var o=$('nv').classList.toggle('on');this.setAttribute('aria-expanded',o)};
+[].forEach.call($('nv').querySelectorAll('a'),function(a){a.onclick=function(){$('nv').classList.remove('on')}});
+[].forEach.call(document.querySelectorAll('[data-t]'),function(a){a.onclick=function(e){e.preventDefault();toast(a.dataset.t)}});
+var dk=matchMedia('(prefers-color-scheme: dark)').matches;$('th').onclick=function(){dk=!dk;document.documentElement.setAttribute('data-theme',dk?'dark':'light')};
+/* donors */
+var NM=['Aarav','Meera','Rohan','Ishita','Kabir','Anaya','Vikram','Sana','Dev','Priya','Arjun','Zoya'],LC=['Gomti Nagar','Civil Lines','Arya Nagar','Lanka','Rajouri Garden','Hazratganj','Kakadeo','Cantt'],AV=['Available now','Available this week','Needs confirmation'];
+var DN=[];for(var i=0;i<48;i++)DN.push({n:NM[i%12],g:G[(i*3+Math.floor(i/8))%8],c:CT[(i*2+Math.floor(i/5))%5],l:LC[(i*5)%8],a:AV[i%3],v:(10+i%18)+' Oct 2026'});
+var sg='O+',fa='Any',fc='All cities';
+$('fc').innerHTML='<option>All cities</option>'+CT.map(function(c){return'<option>'+c+'</option>'}).join('');
+chips($('gs'),G,function(){return sg},function(g){sg=g;run()},'');[].forEach.call($('gs').children,function(b){b.className=''});
+chips($('fa'),['Any','Available now','Available this week'],function(){return fa},function(v){fa=v;run()});
+function run(){fc=$('fc').value;var r=$('res');r.innerHTML='<p class="sub">Searching sample records…</p>';clearTimeout(run.t);run.t=setTimeout(function(){
+var l=DN.filter(function(d){return d.g===sg&&(fc==='All cities'||d.c===fc)&&(fa==='Any'||d.a===fa)});r.innerHTML='';
+if(!l.length){r.innerHTML='<div class="card"><h3>No sample donors for '+sg+' here</h3><p class="sub">Try “All cities” or “Any” availability. This is demo data only.</p></div>';return}
+l.slice(0,6).forEach(function(d){var e=mk('div','dn','<span class="av">'+d.g+'</span><div><b>'+d.n+'</b><small>'+d.l+', '+d.c+'</small><small><span class="st'+(d.a==='Needs confirmation'?' w2':'')+'">'+d.a+'</span> · Last verified '+d.v+' (sample)</small></div>');var b=mk('button','btn s','Request');b.onclick=function(){b.textContent='Noted';b.disabled=true;toast('Demo only: nothing was sent to '+d.n)};e.appendChild(b);r.appendChild(e)});
+r.appendChild(mk('p','dis',l.length+' sample '+(l.length>1?'records':'record')+' match. Sample data, not real people.'))},450)}
+$('sr').onclick=run;$('fc').onchange=run;run();
+/* requests */
+var RQ=[['O-','City Care Hospital','Lucknow',4,'Critical','10 Nov 2026'],['B+','Riverside Medical College','Gorakhpur',2,'Urgent','10 Nov 2026'],['A-','St. Mary’s Centre','Kanpur',3,'Critical','11 Nov 2026'],['AB+','Lakeview Institute','Varanasi',1,'Normal','9 Nov 2026'],['O+','Gomti Care Hospital','Lucknow',2,'Urgent','11 Nov 2026'],['B-','Sunrise Hospital','Delhi',2,'Normal','8 Nov 2026']];var uf='All';
+chips($('rf'),['All','Critical','Urgent','Normal'],function(){return uf},function(v){uf=v;rr()});
+function rr(){$('rq').innerHTML='';RQ.filter(function(r){return uf==='All'||r[4]===uf}).forEach(function(r){var e=mk('div','rc '+r[4],'<div class="t"><span class="bg">'+r[0]+'</span><span class="chip">'+r[4]+'</span></div><h3>'+r[1]+'</h3><p>'+r[2]+' · '+r[3]+' units · Posted '+r[5]+'</p><p style="margin-top:6px"><span class="st">Sample verification: demo</span></p><div class="dt">Illustrative request. In a real product, a hospital would verify this and donors would be contacted through the blood bank. Nothing here is live.</div>');var b=mk('button','btn s','View request');b.style.marginTop='14px';b.setAttribute('aria-expanded','false');b.onclick=function(){var o=e.classList.toggle('open');b.textContent=o?'Hide request':'View request';b.setAttribute('aria-expanded',o)};e.appendChild(b);$('rq').appendChild(e)})}rr();
+/* registration */
+$('bg').innerHTML+=G.map(function(g){return'<option>'+g+'</option>'}).join('');$('ci').innerHTML=CT.map(function(c){return'<option>'+c+'</option>'}).join('');
+var st=0,S=document.querySelectorAll('.stp'),P=$('pg').children;
+function show(){[].forEach.call(S,function(s,i){s.classList.toggle('on',i===st)});[].forEach.call(P,function(p,i){p.classList.toggle('on',i<=st)});$('bk').hidden=st===0;$('nx').textContent=st===2?'Complete registration':'Continue';$('er').textContent=''}
+$('bk').onclick=function(){st--;show()};
+$('fm').onsubmit=function(ev){ev.preventDefault();var m='',a=parseInt($('a').value);
+if(st===0){if($('n').value.trim().length<2)m='Enter your full name.';else if(!(a>=16&&a<=100))m='Enter a valid age.';else if(!/^[0-9+ ]{10,14}$/.test($('p').value.trim()))m='Enter a valid contact number.'}
+if(st===1){if(!$('bg').value)m='Choose your blood group.';else if($('ld').value&&new Date($('ld').value)>new Date())m='Last donation date can’t be in the future.'}
+if(st===2&&!($('c1').checked&&$('c2').checked))m='Please confirm both statements to continue.';
+if(m){$('er').textContent=m;return}
+if(st<2){st++;show();return}
+$('er').textContent='Please complete the earlier steps first.'};
+$('fm').onsubmit=(function(old){return function(ev){ev.preventDefault();if(st===2&&$('c1').checked&&$('c2').checked&&$('n').value.trim().length>1&&$('bg').value){var nm=$('n').value.trim().split(' ')[0];var b=$('nx');b.textContent='Saving…';b.disabled=true;setTimeout(function(){$('fm').innerHTML='<div class="ok"><div class="ck"><svg viewBox="0 0 50 50"><path d="M10 26l10 10 20-22"/></svg></div><h3>Thank you, '+nm+'.</h3><p class="sub" style="margin:10px auto">Your willingness to help could make someone’s tomorrow possible.</p><p class="dis">Demo only: nothing was stored or sent.</p></div>'},700);return}old(ev)}})($('fm').onsubmit);
+/* compat */
+var cm='Receive from',cs='';
+chips($('cm'),['Receive from','Donate to'],function(){return cm},function(v){cm=v;cc()});
+function cc(){$('cg').innerHTML='';var hit=cs?(cm==='Receive from'?FROM[cs]:TO[cs]):[];G.forEach(function(g){var b=mk('button',g===cs?'sel':hit.indexOf(g)>-1?'hit':cs?'dim':'',g);b.onclick=function(){cs=g;cc()};b.setAttribute('aria-label',g);$('cg').appendChild(b)});
+if(cs){$('ct').textContent=cs+(cm==='Receive from'?' can receive red cells from':' can donate red cells to');$('cx').textContent=hit.join(', ')+(cs==='O-'&&cm==='Donate to'?'. O- is often called the universal red-cell donor, so it’s always in demand.':cs==='AB+'&&cm==='Receive from'?'. AB+ can receive red cells from every group.':'.')}}cc();
+/* directory */
+var BK=[['Gomti Demo Blood Centre','Blood bank','Lucknow','8 am – 8 pm'],['City Care Hospital (demo)','Hospital','Lucknow','Open 24 hrs'],['Riverside Demo Medical College','Hospital','Gorakhpur','Open 24 hrs'],['Sunrise Donation Centre','Donation centre','Kanpur','9 am – 5 pm'],['Ganga Demo Blood Bank','Blood bank','Varanasi','9 am – 6 pm'],['Capital Demo Hospital','Hospital','Delhi','Open 24 hrs']],bt='All',bq='';
+chips($('bf'),['All','Blood bank','Hospital','Donation centre'],function(){return bt},function(v){bt=v;rb()});$('bs').oninput=function(){bq=this.value.trim().toLowerCase();rb()};
+function rb(){$('bl').innerHTML='';var l=BK.filter(function(b){return(bt==='All'||b[1]===bt)&&(b[0]+' '+b[2]).toLowerCase().indexOf(bq)>-1});if(!l.length)$('bl').innerHTML='<p class="sub">No demo listings match.</p>';l.forEach(function(b){var e=mk('div','bkc','<span class="chip">'+b[1]+'</span><h3 style="margin-top:12px">'+b[0]+'</h3><p>'+b[2]+' · '+b[3]+' (sample hours)</p><p class="st" style="margin-top:4px">Demo listing: not verified</p><div class="dt">Fictional example. A real listing would show official licence details, address and contact numbers confirmed by the institution.</div>');var x=mk('button','btn o s','View details');x.style.marginTop='12px';x.onclick=function(){var o=e.classList.toggle('open');x.textContent=o?'Hide details':'View details'};e.appendChild(x);$('bl').appendChild(e)})}rb();
+/* myths */
+[['Donating blood makes you permanently weak.','Most eligible donors recover the fluid quickly, and the body replaces donated red cells over time.'],['Only people with rare blood groups are needed.','Every group matters. Needs vary, and all eligible voluntary donors can contribute.'],['Blood donation takes an entire day.','A visit covers registration, screening, donation and rest. Timing varies by centre.'],['Donating blood is unsafe.','Authorised centres use sterile, single-use equipment and follow safety protocols.']].forEach(function(m){var b=mk('button','fp','<div class="fi"><div class="f"><b>MYTH</b>'+m[0]+'<small style="color:var(--mut)">Tap to reveal the fact</small></div><div class="b"><b>FACT</b>'+m[1]+'</div></div>');b.setAttribute('aria-pressed','false');b.onclick=function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true')};$('my').appendChild(b)});
+/* reveal + counters */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var t=e.target;if(t.classList.contains('sg')){t.classList.add('in');return}var n=+t.dataset.n,s=t.dataset.s||'',z=null;function f(ts){z=z||ts;var p=Math.min(1,(ts-z)/1400);t.textContent=Math.round(n*p).toLocaleString('en-IN')+(p===1?s:'');if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.4});
+[].forEach.call(document.querySelectorAll('.sg'),function(e,i){e.style.transitionDelay=i*.15+'s';io.observe(e)});[].forEach.call(document.querySelectorAll('[data-n]'),function(e){io.observe(e)});
+$('sh').onclick=function(){var d={title:'BloodLink',text:'Every drop connects a life. Learn about voluntary blood donation.',url:location.href};if(navigator.share)navigator.share(d).catch(function(){});else{try{navigator.clipboard.writeText(location.href)}catch(e){}toast('Link copied. Share it with someone who could give.')}};
+</script>
+</body>
+</html>
