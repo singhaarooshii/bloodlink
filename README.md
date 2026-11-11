@@ -7,7 +7,7 @@ BloodLink is a homepage prototype for a platform that brings voluntary blood don
 > Prototype only. All donors, requests, hospitals, statistics and registrations are sample data. Nothing is sent or stored, and nothing here is a real medical service.
 
 ## Live demo
-Add your Netlify link here.
+https://blood-link-web.netlify.app
 
 ## Features
 - Donor finder filtered by blood group, city and availability
@@ -26,9 +26,10 @@ Open `index.html` in your browser. No installation is needed.
 Plain HTML, CSS and JavaScript, with no backend, no build step and no dependencies. Font: Plus Jakarta Sans (Google Fonts).
 
 ## Project structure
-- `index.html`: page structure and SVG illustrations
-- `style.css`: design system and layout
-- `script.js`: interactions and sample data
+index.html: the whole site (structure, styles, scripts and SVG illustrations)
+
 
 ## Disclaimer
+BloodLink was created for the AI Prompt Battle by CommunityX. I wrote the creative brief and prompts, and used Claude (Anthropic, free version) to generate the design, illustrations and code. I then reviewed the result, directed the revisions, and deployed it myself. All data on the site is sample data for a prototype, and no real medical service is offered.
+
 Eligibility information is general and does not replace professional medical screening. Blood group compatibility is simplified and not clinical advice.
